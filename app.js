@@ -3,7 +3,6 @@ const fs = require('fs');
 const enmap = require('enmap');
 require('dotenv-flow').config();
 const client = new Discord.Client();
-
 client.commands = new enmap();
 
 fs.readdir('./events/', async (err, files) => {

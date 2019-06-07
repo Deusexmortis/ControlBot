@@ -11,6 +11,15 @@ module.exports = (client, message) => {
     const cmd = client.commands.get(command);
     if (!cmd) return;
 
+    if(command=="gachi") {
+        if(typeof lastIndex == "undefined") {
+            cmd.run(client, message, null).then(x => lastIndex = x)
+            gachiCounter = true
+        }else{
+            cmd.run(client, message, lastIndex).then(x => lastIndex = x)
+        }
+    return}
+
     cmd.run(client, message, args);
 
 };
