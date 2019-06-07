@@ -1,0 +1,16 @@
+{
+  "name": "dc-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Control",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv-flow": "^0.4.0",
+    "enmap": "^4.8.7"
+  }
+}
