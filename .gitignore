@@ -1,0 +1,9 @@
+# ignored filetypes
+.env
+
+# ignored files
+config.js
+
+# ignored folders
+/commands_inactive
+/events_inactive
