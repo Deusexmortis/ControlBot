@@ -7,12 +7,10 @@ client.commands = new enmap();
 
 fs.readdir('./events/', async (err, files) => {
     console.log('\n' + `---LOADING EVENTS---`);
-    if (err) return console.error;
+    //if (err) return console.error;
     console.log("_____________________")
     files.forEach(file => {
-        if (!file.endsWith('.js')) {
-            console.log("No files with '.js' extention")
-            return};
+        if (!file.endsWith('.js')) return;
         const evt = require(`./events/${file}`);
         let evtName = file.split('.')[0];
         console.log(`${evtName}`);
@@ -25,9 +23,7 @@ fs.readdir('./commands/', async (err, files) => {
     if (err) return console.error;
     console.log("_____________________")
     files.forEach(file => {
-        if (!file.endsWith('.js'))  {
-            console.log("No files with '.js' extention")
-            return};
+        if (!file.endsWith('.js')) return;
         let props = require(`./commands/${file}`);
         let cmdName = file.split('.')[0];
         console.log(`${cmdName}`);
