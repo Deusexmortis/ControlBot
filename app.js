@@ -10,7 +10,9 @@ fs.readdir('./events/', async (err, files) => {
     if (err) return console.error;
     console.log("_____________________")
     files.forEach(file => {
-        if (!file.endsWith('.js')) return;
+        if (!file.endsWith('.js')) {
+            console.log("No files with '.js' extention")
+            return};
         const evt = require(`./events/${file}`);
         let evtName = file.split('.')[0];
         console.log(`${evtName}`);
@@ -23,7 +25,9 @@ fs.readdir('./commands/', async (err, files) => {
     if (err) return console.error;
     console.log("_____________________")
     files.forEach(file => {
-        if (!file.endsWith('.js')) return;
+        if (!file.endsWith('.js'))  {
+            console.log("No files with '.js' extention")
+            return};
         let props = require(`./commands/${file}`);
         let cmdName = file.split('.')[0];
         console.log(`${cmdName}`);
