@@ -12,7 +12,7 @@ fs.readdir('./Events/', async (err, files) => {
     files.forEach(file => {
         if (!file.endsWith('.js')) return;
         //console.log(`${file}`);
-        //const evt = require(`./events/${file}`);
+        const evt = require(`./events/${file}`);
         let evtName = file.split('.')[0];
         console.log(`${evtName}`);
         client.on(evtName, evt.bind(null, client));
@@ -21,7 +21,7 @@ fs.readdir('./Events/', async (err, files) => {
 
 fs.readdir('./commands/', async (err, files) => {
     console.log('\n' + `---LOADING COMMANDS---`);
-    if (err) return console.error;
+    //if (err) return console.error;
     console.log("_____________________")
     files.forEach(file => {
         if (!file.endsWith('.js')) return;
