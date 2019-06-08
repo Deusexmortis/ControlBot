@@ -7,6 +7,8 @@ client.commands = new enmap();
 
 fs.readdir('./events/', async (err, files) => {
     console.log('\n' + `---LOADING EVENTS---`);
+    console.log(`de err is: ${err}`)
+    console.log(`de files is:  ${err}`)
     //if (err) return console.error;
     console.log("_____________________")
     files.forEach(file => {
