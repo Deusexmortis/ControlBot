@@ -5,7 +5,7 @@ require('dotenv-flow').config();
 const client = new Discord.Client();
 client.commands = new enmap();
 
-fs.readdir('.ControlBot/events/', async (err, files) => {
+fs.readdir('./ControlBot/events/', async (err, files) => {
     console.log('\n' + `---LOADING EVENTS---`);
     console.log(`de err is: ${err}`)
     console.log(`de files is:  ${err}`)
@@ -20,7 +20,7 @@ fs.readdir('.ControlBot/events/', async (err, files) => {
     });
 });
 
-fs.readdir('.ControlBot/commands/', async (err, files) => {
+fs.readdir('./ControlBot/commands/', async (err, files) => {
     console.log('\n' + `---LOADING COMMANDS---`);
     if (err) return console.error;
     console.log("_____________________")
