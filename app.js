@@ -11,8 +11,8 @@ fs.readdir('./Events/', async (err, files) => {
     console.log("_____________________")
     files.forEach(file => {
         if (!file.endsWith('.js')) return;
-        console.log(`${file}`)
-        const evt = require(`./events/${file}`);
+        //console.log(`${file}`);
+        //const evt = require(`./events/${file}`);
         let evtName = file.split('.')[0];
         console.log(`${evtName}`);
         client.on(evtName, evt.bind(null, client));
