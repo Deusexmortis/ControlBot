@@ -11,7 +11,7 @@ fs.readdir('./Events/', async (err, files) => {
     console.log("_____________________")
     files.forEach(file => {
         if (!file.endsWith('.js')) return;
-        let evt = require(`./events/${file}`);
+        const evt = require(`./Events/${file}`);
         let evtName = file.split('.')[0];
         console.log(`${evtName}`);
         client.on(evtName, evt.bind(null, client));
@@ -24,7 +24,7 @@ fs.readdir('./commands/', async (err, files) => {
     console.log("_____________________")
     files.forEach(file => {
         if (!file.endsWith('.js')) return;
-        let props = require(`./commands/${file}`);
+        let props = require(`./Commands/${file}`);
         let cmdName = file.split('.')[0];
         console.log(`${cmdName}`);
         client.commands.set(cmdName, props);
