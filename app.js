@@ -7,7 +7,7 @@ client.commands = new enmap();
 
 fs.readdir('./events/', async (err, files) => {
     console.log('\n' + `---LOADING EVENTS---`);
-    if (err) return console.error;
+    if (err) return console.log("Something went wrong and the return is 'error'");
     console.log("_____________________")
     files.forEach(file => {
         if (!file.endsWith('.js')) return;
@@ -20,7 +20,7 @@ fs.readdir('./events/', async (err, files) => {
 
 fs.readdir('./commands/', async (err, files) => {
     console.log('\n' + `---LOADING COMMANDS---`);
-    if (err) return console.error;
+    if (err) return console.log("Something went wrong and the return is 'error'");
     console.log("_____________________")
     files.forEach(file => {
         if (!file.endsWith('.js')) return;
