@@ -2,7 +2,7 @@
 .env
 
 # ignored files
-#config.js
+test.js
 
 # ignored folders
 /commands_inactive
